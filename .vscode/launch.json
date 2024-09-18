@@ -9,6 +9,12 @@
             "program": "lib/STATE_MANAGERS/CRUD_MOBX/main.dart",
             "request": "launch",
             "type": "dart"
+        },
+        {
+            "name": "CRUD BLOC CU${defaultBuildTask}",
+            "program": "lib/STATE_MANAGERS/CRUD_BLOC_CUBIT/main.dart",
+            "request": "launch",
+            "type": "dart"
         }
     ]
 }

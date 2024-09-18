@@ -57,6 +57,7 @@ class CrudPageMobx extends StatelessWidget {
               Observer(
                 builder: (context) => Column(
                   children: [
+                    controller.listPerson.isEmpty ? const Text("No people added") : const SizedBox.shrink(),
                     ...List.generate(
                       controller.listPerson.length,
                       (index) => Row(
@@ -97,10 +98,11 @@ class CrudPageMobx extends StatelessWidget {
                                       child: const Text("Edit"),
                                       onPressed: () {
                                         formKeyEditPerson.currentState?.validate() ?? false
-                                            ? controller.editPerson(index, personEditFieldController.text)
+                                            ? () {
+                                                controller.editPerson(index, personEditFieldController.text);
+                                                Navigator.of(context).pop();
+                                              }()
                                             : null;
-
-                                        Navigator.of(context).pop();
                                       },
                                     ),
                                   ],
