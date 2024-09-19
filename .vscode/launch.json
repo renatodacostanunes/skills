@@ -11,8 +11,14 @@
             "type": "dart"
         },
         {
-            "name": "CRUD BLOC CU${defaultBuildTask}",
+            "name": "CRUD BLOC CUBIT",
             "program": "lib/STATE_MANAGERS/CRUD_BLOC_CUBIT/main.dart",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "CRUD SET STATE",
+            "program": "lib/STATE_MANAGERS/CRUD_SET_STATE/main.dart",
             "request": "launch",
             "type": "dart"
         }
